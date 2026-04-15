@@ -172,6 +172,8 @@
             const noteCounterSpan = document.getElementById("noteCounter");
             const windowSizeSpan = document.getElementById("windowSize");
             const userAgentSpan = document.getElementById("userAgent");
+            addBtn.addEventListener("click", addNote);
+            clearAllBtn.addEventListener("click", clearAllNotes);
 
             function updateCounter() {
             const count = notes.length;
@@ -247,8 +249,6 @@
                     titleInput.value = "";
                     contentInput.value = "";
                     titleInput.focus();
-                    addBtn.addEventListener("click", addNote);
-                    clearAllBtn.addEventListener("click", clearAllNotes);
                 }
 
                 function deleteNoteById(id) {
@@ -259,8 +259,6 @@
                     if (index !== -1) {
                     notes.splice(index, 1);
                     renderNotes();
-                    addBtn.addEventListener("click", addNote);
-                    clearAllBtn.addEventListener("click", clearAllNotes);
                     }
                 }
 
