@@ -238,6 +238,8 @@
                     titleInput.value = "";
                     contentInput.value = "";
                     titleInput.focus();
+                    addBtn.addEventListener("click", addNote);
+                    clearAllBtn.addEventListener("click", clearAllNotes);
                 }
 
                 function deleteNoteById(id) {
@@ -248,6 +250,8 @@
                     if (index !== -1) {
                     notes.splice(index, 1);
                     renderNotes();
+                    addBtn.addEventListener("click", addNote);
+                    clearAllBtn.addEventListener("click", clearAllNotes);
                     }
                 }
 
@@ -267,8 +271,6 @@
                     }
                 }
 
-                addBtn.addEventListener("click", addNote);
-                clearAllBtn.addEventListener("click", clearAllNotes);
 
         </script>
     </body>
